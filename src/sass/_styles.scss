@@ -1,0 +1,98 @@
+body {
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+}
+
+input {
+    padding: 8px 12px;
+    min-width: 150px;
+    height: 40px;
+    font: inherit;
+    background: white;
+    border: 2px solid rgba(0,0,0,0.3)
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    height: 40px;
+    background: white;
+    border: 2px solid rgba(0,0,0,0.3);
+}
+
+.search-form {
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(23, 49, 199);
+}
+
+.load-more {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+    height: 40px;
+    margin: auto;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(70px);
+    justify-content: space-evenly;
+    position: relative;
+    margin: 0 auto 90px auto;
+}
+
+.photo-card {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+    @media screen and (max-width: 680px) {        
+        width: calc(100vw - 30px);
+    }
+
+    @media screen and (min-width: 681px) and (max-width: 1199px) {
+        width: calc((100vw - 60px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100vw - 90px) / 3);        
+    }
+}
+
+.thumb {
+    // width: 100%;
+    height: 350px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.thumb img {
+    width: 100%;
+    // height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.is-hidden {
+display: none;
+}
+
