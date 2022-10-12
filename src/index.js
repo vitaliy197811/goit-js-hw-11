@@ -12,19 +12,22 @@ let searchResult = 0;
 
 function onSearch(e) {
   e.preventDefault()
+  searchQuery.trim();
   if (searchQuery !== refs.form.elements.searchQuery.value) {
     refs.loadMoreBtn.classList.remove('is-hidden');
     refs.gallery.innerHTML = " ";
     page = 1;
   }
+
   if (!refs.form.elements.searchQuery.value) {
+    refs.gallery.innerHTML = " ";
     refs.loadMoreBtn.classList.add('is-hidden');
     return Notiflix.Notify.failure("Sorry, you didn't write anything");
   }
   
-  searchQuery = refs.form.elements.searchQuery.value;
+  searchQuery = refs.form.elements.searchQuery.value.trim();
 
-   pixabayApi(searchQuery)
+  pixabayApi(searchQuery)
 }
 
 
