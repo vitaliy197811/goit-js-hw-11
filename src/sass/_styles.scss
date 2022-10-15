@@ -42,12 +42,10 @@ button {
 }
 
 .gallery {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     transform: translateY(70px);
-    justify-content: space-evenly;
-    margin: 0 auto 90px auto;
+    margin: 0 auto 80px auto;
 }
 
 .photo-card {
